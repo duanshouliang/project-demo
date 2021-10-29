@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: config-service
+  profiles:
+    active: local
+  cloud:
+    nacos:
+      config:
+        server-addr: localhost:8848
+        file-extension: yaml
+        #自定义命名空间的ID
+        namespace: local
+        refresh-enabled: true
+        encode: UTF-8
+        group: DEFAULT_GROUP
+        prefix: ${spring.application.name}
+        shared-configs:
+          - data-id: share-config
+            refresh: true
+            group: DEFAULT_GROUP
+      username: nacos
+      password: nacos
+
+
+

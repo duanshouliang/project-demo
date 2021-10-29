@@ -1,0 +1,34 @@
+spring:
+  application:
+    name: nacos-config-service
+  profiles:
+    active: local
+  cloud:
+    nacos:
+      config:
+        server-addr: localhost:8848
+        file-extension: yaml
+        #自定义命名空间的ID
+        namespace: local
+        refresh-enabled: true
+        encode: UTF-8
+        group: DEFAULT_GROUP
+        prefix: ${spring.application.name}
+      username: nacos
+      password: nacos
+      discovery:
+        server-addr: ${spring.cloud.nacos.config.server-addr}
+        instance-enabled: true
+        namespace: ${spring.cloud.nacos.config.namespace}
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always
+
+
+
+
