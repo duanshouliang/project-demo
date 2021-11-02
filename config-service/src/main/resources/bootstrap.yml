@@ -2,7 +2,7 @@ spring:
   application:
     name: config-service
   profiles:
-    active: local
+    active: dev
   cloud:
     nacos:
       config:
@@ -20,6 +20,7 @@ spring:
             group: DEFAULT_GROUP
       username: nacos
       password: nacos
+
 
 
 
