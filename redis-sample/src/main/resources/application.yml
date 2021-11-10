@@ -1,0 +1,35 @@
+server:
+  port: 8081
+
+spring:
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password: 123456
+    lettuce:
+      pool:
+        max-active: 100
+        max-idle: 8
+        max-wait: 1
+    timeout: 1000
+  cloud:
+    nacos:
+      config:
+        server-addr: localhost:8848
+        file-extension: yaml
+        #自定义命名空间的ID
+        namespace: local
+        refresh-enabled: true
+        encode: UTF-8
+        group: DEFAULT_GROUP
+        prefix: ${spring.application.name}
+        shared-configs:
+          - data-id: share-config
+            refresh: true
+            group: DEFAULT_GROUP
+        enabled: false
+
+      username: nacos
+      password: nacos
+  application:
+    name: redis-sample

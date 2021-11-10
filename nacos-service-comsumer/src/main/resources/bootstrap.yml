@@ -1,6 +1,6 @@
 spring:
   application:
-    name: nacos-service-provider
+    name: nacos-service-consumer
   profiles:
     active: local
   cloud:
