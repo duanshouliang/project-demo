@@ -60,5 +60,32 @@
       <version>1.2.76</version>
       <scope>compile</scope>
     </dependency>
+    <!-- https://mvnrepository.com/artifact/org.apache.curator/curator-client -->
+    <dependency>
+      <groupId>org.apache.curator</groupId>
+      <artifactId>curator-client</artifactId>
+      <version>5.2.0</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/org.apache.curator/curator-framework -->
+    <dependency>
+      <groupId>org.apache.curator</groupId>
+      <artifactId>curator-framework</artifactId>
+      <version>5.2.0</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.apache.curator/curator-recipes -->
+    <dependency>
+      <groupId>org.apache.curator</groupId>
+      <artifactId>curator-recipes</artifactId>
+      <version>5.2.0</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/org.fusesource/sigar -->
+    <dependency>
+      <groupId>org.fusesource</groupId>
+      <artifactId>sigar</artifactId>
+      <version>1.6.4</version>
+    </dependency>
+
   </dependencies>
 </project>
